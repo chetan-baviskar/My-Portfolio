@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chetan Baviskar | Software Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: black;
+            color: cyan;
+            overflow-x: hidden;
+        }
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            border-bottom: 2px solid cyan;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: black;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: cyan;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: cadetblue;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: cyan;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 35px;
+            cursor: pointer;
+            color: cyan;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            z-index: 2000;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: cyan;
+            font-size: 28px;
+            margin: 18px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: white;
+        }
+
+        .show {
+            right: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            color: cyan;
+        }
+
+        #about {
+            min-height: 100vh;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h1 {
+            font-size: 55px;
+            margin-bottom: 25px;
+            color: cyan;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 22px;
+            color:white;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 25px;
+            border: 3px solid cyan;
+            object-fit: cover;
+        }
+
+        @media(max-width:992px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text h1 {
+                font-size: 42px;
+            }
+
+            .about-text p {
+                font-size: 16px;
+            }
+
+            .about-image img {
+                max-width: 260px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            Chetan Baviskar
+        </div>
+
+        <div class="nav-links">
+            <a href="portfolio.html">HOME</a>
+            <a href="aboutme.html">ABOUT</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="certification.html">CERTIFICATION</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+        <div class="hamburger" onclick="openMenu()">
+            ☰
+        </div>
+
+    </nav>
+
+    <div class="mobile-menu" id="menu">
+
+        <div class="close-btn" onclick="closeMenu()">
+            ✕
+        </div>
+
+        <a href="portfolio.html">HOME</a>
+        <a href="aboutme.html">ABOUT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="certification.html">CERTIFICATION</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <section id="about">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h1>About Me</h1>
+
+                <p>
+                    Hello! I am <b>Chetan Baviskar</b>, a passionate Web Developer and
+                    Information Technology student at Government Polytechnic Mumbai
+                    (Class of 2027). I am an aspiring Software Engineer who is passionate
+                    about coding, web development, and modern technology.
+                    I love exploring creative ideas and turning them into real digital experiences.
+                    Technology motivates me to learn something new every single day.
+                </p>
+
+                <p>
+                    I enjoy building responsive and user-friendly websites, learning
+                    programming languages, and creating projects that improve my
+                    development skills and practical knowledge.
+                    I always focus on writing clean, efficient, and modern code.
+                    Building projects helps me improve my creativity and problem-solving abilities.
+                </p>
+
+                <p>
+                    My interests include Frontend Development, Java Programming,
+                    UI/UX Design, and Full Stack Development using modern technologies.
+                    I enjoy working with HTML, CSS, JavaScript, and modern web tools.
+                    Learning new technologies and frameworks excites me as a developer.
+                </p>
+
+                <p>
+                    My goal is to become a successful Software Engineer and develop
+                    innovative applications that solve real-world problems while
+                    continuously learning and growing in the tech industry.
+                    I want to contribute to impactful projects and inspire others through technology.
+                    I believe consistency, hard work, and passion are the keys to success.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="selfimage.jpeg" alt="Chetan Baviskar">
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function openMenu() {
+            document.getElementById("menu").classList.add("show");
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").classList.remove("show");
+        }
+
+    </script>
+
+</body>
+
+</html>
